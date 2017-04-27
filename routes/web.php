@@ -26,3 +26,18 @@ Route::get('/find-centre/{location?}', [
 Route::get('/map/{location?}', [
     'uses' => 'WebController@findCentre'
 ]);
+
+Route::get('/get-timetable', [
+    'as' => 'get-timetable',
+    'uses' => 'WebController@getTimetable'
+]);
+
+Route::get('/test-timetable', [
+    'as' => 'test-timetable',
+    'uses' => 'ScheduleController@sendTimeTable'
+]);
+
+Route::post('/submit-timetable', [
+    'as' => 'submit-timetable',
+    'uses' => 'WebController@submitTimetable'
+]);

@@ -14,6 +14,8 @@ return [
 
     'name' => 'OAU Student Location Finder',
 
+    'email' => 'auto.timetable@locationfinder.com',
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
