@@ -5,7 +5,7 @@
 
 @section('body_content')
 
-    <div class="container" style="min-height: 400px;margin-top: 77px;">
+    <div class="container" style="min-height: 400px;margin-top: 100px;">
         <div class="row hidden" style="">
             <div class="col-md-6">
                 <div class="panel panel-primary">
@@ -37,10 +37,17 @@
             </div>
         </div>
 
+        <div class="text-center">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="title-one">{{ ($defaultLocation != null) ? $defaultLocation : '' }}</h2>
+                <p class="hidden"></p>
+            </div>
+        </div>
+
         <div class="row">
-            <div class="col-md-12" style="margin-top: 20px;">
+            <div class="col-md-12" style="margin-top: 20px;margin-bottom: 50px;">
                 <div style="width: 100%; height: 400px;">
-                    {{--{!! Mapper::render(0) !!}--}}
+                    {!! Mapper::render(0) !!}
                 </div>
             </div>
         </div>
@@ -74,6 +81,14 @@
                         <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Bus stop 2']) }}">Bus stop 2</a>
                         <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Health Centre']) }}">Health Centre</a>
                         <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Oduduwa hall']) }}">Amphitheatre</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Computer Auditorium']) }}">Computer building and Faculty of Tech</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'University Zoo']) }}">OAU ZOO</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Biological Sciences']) }}">Biological Sciences</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Senate Car Park']) }}">senate car park</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Moremi Female Hostel']) }}">Moremi Female hostel</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'ETF Hall']) }}">ETF hostel</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Muritala Mohammend Post Graduate Hall']) }}">Post graduate hall</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Awolowo hall']) }}">Awolowo hall</a>
                     </div>
                 </div>
             </div>

@@ -5,32 +5,24 @@ namespace App\Http\Controllers;
 use App\TimeTable;
 use App\UserTimeTable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class ScheduleController extends Controller
 {
-    public function sendTimeTable()
+    public static function sendTimeTable()
     {
         foreach(UserTimeTable::get() as $user)
         {
             if($timetable = TimeTable::where('department', $user->department)->where('level', $user->level)->where('semester', $user->semester)->first())
             {
-                $data = [
-                    'sender' => $sender,
-                    'receiver' => $receiver,
-                    'message_content' => $message
-                ];
 
-                Mail::send(['html' => 'emails.convert_birthday'], $data, function($message) use ($receiver, $sender, $subject)
+                Mail::send(['html' => 'emails.timetable'], ['user' => $user, 'timeTable' => $timetable->timetable], function($message) use ($user)
                 {
-                    $message->from($sender['email']);
-                    $message->to($receiver['email'])->subject(config('app.name').' - '.$subject);
+                    $message->to($user->email)->subject(config('app.name').' - Your Timetable');
                 });
 
-                /*Mail::send(['html' => 'emails.timetable'], [], function($message)
-                {
-                    $message->to('babsmacheda@ymail.com')->subject(config('app.name').' - Your Timetable');
-                });*/
+                Log::info('Timetable sent to: '.$user->email);
 
             } else {
                 //Send mail for no timetable

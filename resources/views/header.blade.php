@@ -6,12 +6,13 @@
                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand hidden" href="{{ route('home') }}"><h1><img src="images/logo.png" alt="logo"></h1></a>
-                <a class="navbar-brand" href="{{ route('home') }}"><h1 style="color: #444">{{ config('app.name') }}</h1></a>
+                <a class="navbar-brand" href="{{ route('home') }}"><h1 style="color: #444" class="hidden-xs hidden-sm">{{ config('app.name') }}</h1></a>
+                <a class="navbar-brand" href="{{ route('home') }}"><h1 style="color: #444" class="visible-xs visible-sm">OAU SLF</h1></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class=" active"><a href="{{ route('home') }}">Home</a></li>
-                    <li class=""><a href="{{ route('find-centre') }}">Find a centre</a></li>
+                    <li class=""><a href="{{ route('find-centre') }}">Find a location on campus</a></li>
                 </ul>
             </div>
         </div>

@@ -36,33 +36,33 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="timeTableFormLabel">What department and level are you?</h4>
                 </div>
-                @if($errors->count() > 0)
-
-                    <div class="alert alert-danger">
-                        {!! $errors->first() !!}
-                    </div>
-
-                @elseif(Session::has('success'))
-
-                    <div class="alert alert-success">
-                        {!! Session::get('success') !!}
-                    </div>
-
-                @elseif(Session::has('warning'))
-
-                    <div class="alert alert-warning">
-                        {!! Session::get('warning') !!}
-                    </div>
-
-                @elseif(Session::has('danger'))
-
-                    <div class="alert alert-danger">
-                        {!! Session::get('danger') !!}
-                    </div>
-
-                @endif
                 <form method="post" action="{{ route('submit-timetable') }}">
                     <div class="modal-body">
+                        @if($errors->count() > 0)
+
+                            <div class="text-danger text-center">
+                                {!! $errors->first() !!}
+                            </div>
+
+                        @elseif(Session::has('success'))
+
+                            <div class="text-success text-center">
+                                {!! Session::get('success') !!}
+                            </div>
+
+                        @elseif(Session::has('warning'))
+
+                            <div class="text-warning text-center">
+                                {!! Session::get('warning') !!}
+                            </div>
+
+                        @elseif(Session::has('danger'))
+
+                            <div class="text-danger text-center">
+                                {!! Session::get('danger') !!}
+                            </div>
+
+                        @endif
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" name="email" class="form-control" placeholder="Enter your Email address" required>
@@ -137,6 +137,14 @@
                         <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Bus stop 2']) }}">Bus stop 2</a>
                         <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Health Centre']) }}">Health Centre</a>
                         <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Oduduwa hall']) }}">Amphitheatre</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Computer Auditorium']) }}">Computer building and Faculty of Tech</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'University Zoo']) }}">OAU ZOO</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Biological Sciences']) }}">Biological Sciences</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Senate Car Park']) }}">senate car park</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Moremi Female Hostel']) }}">Moremi Female hostel</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'ETF Hall']) }}">ETF hostel</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Muritala Mohammend Post Graduate Hall']) }}">Post graduate hall</a>
+                        <a style="margin-bottom: 10px; margin-right: 10px;" class="btn btn-success" href="{{ route('find-centre', ['location' => 'Awolowo hall']) }}">Awolowo hall</a>
                     </div>
                 </div>
             </div>
@@ -373,7 +381,30 @@
 @endsection
 
 @section('page_scripts')
-    <script>
 
-    </script>
+    @if($errors->count() > 0)
+
+        <script>
+            $('#timeTableForm').modal('show');
+        </script>
+
+    @elseif(Session::has('success'))
+
+        <script>
+            $('#timeTableForm').modal('show');
+        </script>
+
+    @elseif(Session::has('warning'))
+
+        <script>
+            $('#timeTableForm').modal('show');
+        </script>
+
+    @elseif(Session::has('danger'))
+
+        <script>
+            $('#timeTableForm').modal('show');
+        </script>
+
+    @endif
 @endsection
