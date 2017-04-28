@@ -1,27 +1,38 @@
-# Laravel PHP Framework
+# OAU Students' Location Finder + Timetable System
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+OAU Students' Location Finder is a web app that helps a student of OAU navigate around campus easily
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+The application has 3 features
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+1.) Campus location finder
+2.) Student's respective departmental timetable email alerts
+3.) Transportation fares list around campus
 
-## Official Documentation
+## Test
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+The web app is available at [OAU Locations Finder](http://oau.smartwebhack.com).
+
+## Group 9 Team Members
+
+1.) Babalola Macaulay
+2.) Hamza Bashir
+3.) George Darrick
+4.) Mbadugha Anthonia
+5.) Sanusi Wasilat
+6.) Ajakaye paul
+7.) Oke Oluwaseun
+8.) Adewale Toluwani
+9.) Oyekanmi Lekan
+10.) Adeleke Abiodun
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Thank you for considering contributing to the OAU Locations Finder Web App.
 
-## Security Vulnerabilities
+## Copyright
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+OAU SWEP 200 Group 9 Project. All Rights Reserved
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The OAU Students' Location Finder is open-sourced software licensed under the MIT license.
