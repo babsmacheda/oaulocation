@@ -42,7 +42,7 @@ Thank you for considering contributing to the OAU Locations Finder Web App.
 
 ## Copyright
 
-OAU SWEP 200 Group 9 Project. All Rights Reserved
+OAU SWEP 200 Group 9 Project 2017. All Rights Reserved
 
 ## License
 
